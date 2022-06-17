@@ -41,7 +41,7 @@ function init() {
     //glbファイルの読み込み
     const loader = new GLTFLoader();
 
-    loader.load('http://localhost:8080/untitled.glb', function(gltf) {
+    loader.load('https://eagle-games.github.io/nonetypeschool/untitled.glb', function(gltf) {
         model = gltf.scene;
         model.traverse((object) => { //モデルの構成要素
             if(object.isMesh) { //その構成要素がメッシュだったら
