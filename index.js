@@ -6,8 +6,6 @@ let camera;
 let scene;
 let renderer;
 let model;
-let width;
-let height;
 
 init();
 animate();
@@ -20,7 +18,7 @@ function init() {
     scene = new THREE.Scene();
 
     //カメラの作成
-    camera = new THREE.PerspectiveCamera(45, width / height , 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight , 0.1, 1000);
     //カメラセット
     camera.position.set(-20, 30, 50);
     camera.lookAt(new THREE.Vector3(0, 10, 0));
