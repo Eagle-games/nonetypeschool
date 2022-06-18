@@ -11,19 +11,16 @@ init();
 animate();
 
 function init() {
-    // ウィンドウサイズ設定
-    width = document.getElementById('WebGL-output').getBoundingClientRect().width;
-    height = document.getElementById('WebGL-output').getBoundingClientRect().height;
     //シーンの作成
     scene = new THREE.Scene();
 
     //カメラの作成
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight , 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     //カメラセット
     camera.position.set(-20, 30, 50);
     camera.lookAt(new THREE.Vector3(0, 10, 0));
     
-     // 滑らかにカメラコントローラーを制御する
+        // 滑らかにカメラコントローラーを制御する
     const controls = new OrbitControls(camera, document.body);
     controls.enableDamping = true;
     controls.dampingFactor = 0.2;
